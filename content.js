@@ -2,9 +2,10 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
-      var currentURL = $("a[href^='http']").eq(0).attr("href");
+    	//current domain
+    	var currentURL = document.location.host;
 
-      alert(currentURL);
+    	alert(currentURL);
     }
   }
 );
