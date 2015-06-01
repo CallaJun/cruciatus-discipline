@@ -1,11 +1,13 @@
 // content.js
-chrome.runtime.onMessage.addListener(
+/*chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
-    	//current domain
-    	var currentURL = document.location.host;
-
-    	alert(currentURL);
+    	IF THE ICON CLICKED
     }
   }
-);
+);*/
+var currentURL = document.location.host;
+console.log(currentURL);
+if(currentURL.includes("facebook")){
+    alert("Get off!");
+}
